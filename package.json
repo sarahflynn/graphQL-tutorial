@@ -2,13 +2,22 @@
   "name": "graphql-tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/server.js"
   },
-  "author": "Sarah Flynn <sflynn.pdx@gmail.com> (https://github.com/sarahflynn)",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "graphql": "^14.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "nodemon": "^1.18.3"
   }
 }
